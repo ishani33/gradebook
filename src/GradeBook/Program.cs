@@ -14,15 +14,40 @@ namespace GradeBook
             */
 
             var book = new Book("Class X");
-            book.AddGrade(89.1);
-            book.AddGrade(98.3);
-            book.AddGrade(65.6);
+
+            // book.AddGrade(89.1);
+            // book.AddGrade(98.3);
+            // book.AddGrade(65.6);
             //book.grades.Add(45.6);
+
+            Console.WriteLine("Please enter the grades. Press 'Q' to quit and display results.");
+            while(true){
+                var input = Console.ReadLine();
+                if(input.Equals("Q")){
+                    break;
+                }
+                try{
+                    var inputGrade = double.Parse(input);
+                    book.AddGrade(inputGrade);
+                }
+                catch(ArgumentException ex){
+                    Console.WriteLine(ex.Message);
+                } //to rethrow the exception we can write throw; below Console.WriteLine statement, this could be done if we didn't know the exception type
+                catch(FormatException ex){
+                    Console.WriteLine(ex.Message);
+                }
+                finally //a piece of block which always executes irrespective of any exceptions
+                {
+                    Console.WriteLine("*");
+                }
+            }
+
             var stats = book.GetStatistics();
 
             Console.WriteLine($"The average grade is {stats.Average}.");
             Console.WriteLine($"The lowest grade is {stats.Low}.");
             Console.WriteLine($"The highest grade is {stats.High}.");
+            Console.WriteLine($"The letter grade is {stats.Letter}.");
             
             
             /*var x=4.1;
