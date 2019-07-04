@@ -1,0 +1,17 @@
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.deps.json
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.runtimeconfig.json
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.runtimeconfig.dev.json
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.dll
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.pdb
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csprojAssemblyReference.cache
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csproj.CoreCompileInputs.cache
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.AssemblyInfoInputs.cache
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.AssemblyInfo.cs
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.dll
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.pdb
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.dll
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.pdb
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csproj.CopyComplete

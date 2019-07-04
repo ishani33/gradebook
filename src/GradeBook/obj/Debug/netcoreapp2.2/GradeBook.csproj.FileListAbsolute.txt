@@ -1,0 +1,11 @@
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/bin/Debug/netcoreapp2.2/GradeBook.deps.json
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/bin/Debug/netcoreapp2.2/GradeBook.runtimeconfig.json
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/bin/Debug/netcoreapp2.2/GradeBook.runtimeconfig.dev.json
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/bin/Debug/netcoreapp2.2/GradeBook.dll
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/bin/Debug/netcoreapp2.2/GradeBook.pdb
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/obj/Debug/netcoreapp2.2/GradeBook.csprojAssemblyReference.cache
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/obj/Debug/netcoreapp2.2/GradeBook.csproj.CoreCompileInputs.cache
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/obj/Debug/netcoreapp2.2/GradeBook.AssemblyInfoInputs.cache
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/obj/Debug/netcoreapp2.2/GradeBook.AssemblyInfo.cs
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/obj/Debug/netcoreapp2.2/GradeBook.dll
+/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/obj/Debug/netcoreapp2.2/GradeBook.pdb

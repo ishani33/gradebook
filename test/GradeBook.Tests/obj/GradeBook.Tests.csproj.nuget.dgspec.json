@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/GradeBook.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/GradeBook.csproj",
+        "projectName": "GradeBook",
+        "projectPath": "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/GradeBook.csproj",
+        "packagesPath": "/Users/ishanichauhan/.nuget/packages/",
+        "outputPath": "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/ishanichauhan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
+        "projectName": "GradeBook.Tests",
+        "projectPath": "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
+        "packagesPath": "/Users/ishanichauhan/.nuget/packages/",
+        "outputPath": "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/test/GradeBook.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/ishanichauhan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/GradeBook.csproj": {
+                "projectPath": "/Users/ishanichauhan/Desktop/projects/visa-tutorials/gradebook/src/GradeBook/GradeBook.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
