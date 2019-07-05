@@ -4,7 +4,43 @@ using System.Collections.Generic;
 namespace GradeBook
 {
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
-    public class Book
+
+    public class NamedObject{
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+
+        public string Name{
+            get;
+            set;
+        }
+    }
+
+    public interface IBook
+    {
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name{get;}
+        event GradeAddedDelegate GradeAdded;
+    }
+
+    public abstract class Book : NamedObject, IBook
+    {
+        public Book(string name) : base(name)
+        {
+        }
+        public virtual event GradeAddedDelegate GradeAdded;
+
+        public abstract void AddGrade(double grade);
+
+        public virtual Statistics GetStatistics()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class InMemoryBook : Book
     {
         //public List<double> grades;
         private List<double> grades;
@@ -28,13 +64,17 @@ namespace GradeBook
 
         // NEWER WAY: we don't need to define 'name' explicitly or write anything inside get and set blocks
         // Known as AUTO PROPERTY
-        public string Name{
+
+        //WE SHALL INHERIT THIS FROM NamedObject CLASS
+        
+        /*public string Name{
             get;
             set;
             //private set;    //after constructing the name of the book we won't be able to change it
-        }
+        }*/
 
-        public Book(string name){
+        public InMemoryBook(string name) : base(name)
+        {
             grades = new List<double>();
             Name = name;
         }
@@ -65,7 +105,7 @@ namespace GradeBook
             }
         }
 
-        public void AddGrade(double grade){
+        public override void AddGrade(double grade){
             if(grade <= 100 && grade>=0)
             {
                 grades.Add(grade);
@@ -80,9 +120,9 @@ namespace GradeBook
             }
         }
 
-        public event GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate GradeAdded;
 
-        public Statistics GetStatistics(){
+        public override Statistics GetStatistics(){
             var result = new Statistics();
             result.Average = 0.0;
             result.High = double.MinValue;
