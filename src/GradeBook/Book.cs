@@ -7,14 +7,44 @@ namespace GradeBook
     {
         //public List<double> grades;
         private List<double> grades;
-        public string Name;
+
+        // DEFINING PROPERTIES
+        // OLDER WAY:
+
+        // public string Name{
+        //     //GETTER
+        //     get{
+        //         return name;
+        //     }
+        //     //SETTER
+        //     set{
+        //         if(!String.IsNullOrEmpty(value)){
+        //             name = value;   //value is an implicit variable that already exists
+        //         }
+        //     }
+        // }
+        // private string name;
+
+        // NEWER WAY: we don't need to define 'name' explicitly or write anything inside get and set blocks
+        // Known as AUTO PROPERTY
+        public string Name{
+            get;
+            set;
+            //private set;    //after constructing the name of the book we won't be able to change it
+        }
 
         public Book(string name){
             grades = new List<double>();
             Name = name;
         }
 
-        public void AddGrade(char letter){
+        //DEFINING readonly and const FIELDS (constants):
+        readonly string category="Science";   //can only initialise or change in the CONSTRUCTOR
+        public const string CLASSES="11th";    //cannot be changed anywhere, not even in the constructor
+        //convention - const values are written in CAPS, they can be made public as no one can change them
+        //const members are treated as static members, so to access -> Book.CLASSES, objname.CLASSES won't work
+
+        public void AddGrade(char letter){  //the return type is not a part of method signature
             switch(letter){
                 case 'A':
                     AddGrade(90);
