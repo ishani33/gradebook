@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 
 namespace GradeBook
@@ -30,14 +31,15 @@ namespace GradeBook
         public Book(string name) : base(name)
         {
         }
-        public virtual event GradeAddedDelegate GradeAdded;
-
+        // public virtual event GradeAddedDelegate GradeAdded;
+        public abstract event GradeAddedDelegate GradeAdded;
         public abstract void AddGrade(double grade);
+        public abstract Statistics GetStatistics();
 
-        public virtual Statistics GetStatistics()
-        {
-            throw new NotImplementedException();
-        }
+        // public virtual Statistics GetStatistics()
+        // {
+        //     throw new NotImplementedException();
+        // }
     }
 
     public class InMemoryBook : Book
@@ -124,14 +126,15 @@ namespace GradeBook
 
         public override Statistics GetStatistics(){
             var result = new Statistics();
-            result.Average = 0.0;
-            result.High = double.MinValue;
-            result.Low = double.MaxValue;
+            // result.Average = 0.0;
+            // result.High = double.MinValue;
+            // result.Low = double.MaxValue;
             
             foreach(var number in grades){
-                result.High=Math.Max(number,result.High);
-                result.Low=Math.Min(number,result.Low);
-                result.Average += number;
+                result.Add(number);
+                //result.High=Math.Max(number,result.High);
+                //result.Low=Math.Min(number,result.Low);
+                //result.Average += number;
             }
 
             /* Using DO-WHILE Loop */
@@ -163,26 +166,67 @@ namespace GradeBook
             //     index++;
             // }
 
-            result.Average /= grades.Count;
+            //result.Average /= grades.Count;
 
-            switch(result.Average){
-                case var d when d>=90.0:
-                    result.Letter = 'A';
-                    break;
-                case var d when d>=80.0:
-                    result.Letter = 'B';
-                    break;
-                case var d when d>=70.0:
-                    result.Letter = 'C';
-                    break;
-                case var d when d>=60.0:
-                    result.Letter = 'D';
-                    break;
-                default:
-                    result.Letter = 'F';
-                    break;
-            }
+            // switch(result.Average){
+            //     case var d when d>=90.0:
+            //         result.Letter = 'A';
+            //         break;
+            //     case var d when d>=80.0:
+            //         result.Letter = 'B';
+            //         break;
+            //     case var d when d>=70.0:
+            //         result.Letter = 'C';
+            //         break;
+            //     case var d when d>=60.0:
+            //         result.Letter = 'D';
+            //         break;
+            //     default:
+            //         result.Letter = 'F';
+            //         break;
+            // }
             // done:
+            return result;
+        }
+    }
+
+    public class DiskBook : Book
+    {
+        public DiskBook(string name) : base(name)
+        {
+        }
+
+        public override event GradeAddedDelegate GradeAdded;
+
+        public override void AddGrade(double grade)
+        {
+            // var writer = File.AppendText($"{Name}.txt");
+            // writer.WriteLine(grade);
+            // writer.Close(); //or writer.Dispose(); -- from the inbuilt interface IDisposable that does garbage collection
+
+            using (var writer = File.AppendText($"{Name}.txt"))
+            {
+                writer.WriteLine(grade);
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }   
+            }
+        }
+
+        public override Statistics GetStatistics()
+        {
+            var result = new Statistics();
+            using (var reader = File.OpenText($"{Name}.txt"))
+            {
+                var line = reader.ReadLine();
+                while(line!=null)
+                {
+                    var number = double.Parse(line);
+                    result.Add(number);
+                    line = reader.ReadLine();
+                }
+            }
             return result;
         }
     }

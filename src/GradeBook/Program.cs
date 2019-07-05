@@ -13,7 +13,7 @@ namespace GradeBook
             Program.Main(args); //now the program would go into infinite loop because Main calls Main
             */
 
-            var book = new InMemoryBook("Class X");
+            IBook book = new DiskBook("Class X");
             book.GradeAdded += OnGradeAdded; //subscribing an event
             book.GradeAdded += OnGradeAdded;
             book.GradeAdded -= OnGradeAdded; //unsubscribing an event
@@ -29,7 +29,7 @@ namespace GradeBook
 
             var stats = book.GetStatistics();
 
-            Console.WriteLine(InMemoryBook.category);
+            // Console.WriteLine(InMemoryBook.category);
             Console.WriteLine($"For the book named {book.Name}");
             Console.WriteLine($"The average grade is {stats.Average}.");
             Console.WriteLine($"The lowest grade is {stats.Low}.");
