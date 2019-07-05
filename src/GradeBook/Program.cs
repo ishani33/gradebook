@@ -14,6 +14,11 @@ namespace GradeBook
             */
 
             var book = new Book("Class X");
+            book.GradeAdded += OnGradeAdded;
+            book.GradeAdded += OnGradeAdded;
+            book.GradeAdded -= OnGradeAdded;
+
+            // book.GradeAdded = null; //this is not allowed since we are not using pure delegates. Using events puts some restrictions on the delegates. (refer notes)
 
             // book.AddGrade(89.1);
             // book.AddGrade(98.3);
@@ -87,6 +92,10 @@ namespace GradeBook
             // {
             //     Console.WriteLine("Hello!");
             // }
+        }
+
+        static void OnGradeAdded(object sender, EventArgs args){
+            Console.WriteLine("A grade was added.");
         }
     }
 }

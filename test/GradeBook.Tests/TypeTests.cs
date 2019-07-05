@@ -3,8 +3,40 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+    public delegate string WriteLogDelegate(string logMessage); //this delegate can point to any method that takes a string and returns a string
     public class TypeTests
     {
+        int count=0;
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+            WriteLogDelegate log;
+            log = ReturnMessage;    //can also write as log = new WriteLogDelegate(ReturnMessage);
+            var result = log("Hello!");
+            Assert.Equal("Hello!",result);
+        }
+        string ReturnMessage(string message)
+        {
+            count++;
+            return message;
+        }
+
+        [Fact]
+        public void WriteLogDelegateCanPointToMultipleMethods()
+        {
+            WriteLogDelegate log = ReturnMessage;
+            log += ReturnMessage;
+            log += IncrementCount;
+            var result = log("Hello!");
+            Assert.Equal(3,count);
+        }
+
+        string IncrementCount(string message)
+        {
+            count++;
+            return message.ToLower();
+        }
+
         [Fact]
         public void PassIntByRef()
         {
